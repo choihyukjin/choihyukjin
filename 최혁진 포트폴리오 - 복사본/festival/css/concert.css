@@ -1,0 +1,619 @@
+@font-face {
+    font-family: 'VitroCore';
+    font-weight: normal;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroCore.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroCore.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroCore.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroCore.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroCore.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VitroPride';
+    font-weight: normal;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroPride.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroPride.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroPride.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroPride.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroPride.ttf') format("truetype");
+    font-display: swap;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'VitroPride';
+    color: #111;
+    font-size: 16px;
+}
+
+::selection{
+    background-color: #ffd666;
+    color: #fff;
+}
+
+section {
+    width: 100%;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+}
+
+.header_box {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    display: block;
+    width: 70px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.gnb {
+    width: 50%;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    right: -50%;
+    background-color: #fff;
+    display: none;
+    font-weight: bold;
+}
+
+.gnb > li:nth-child(2) > a {
+    background: url(../images/Vector-Arrow-down-PNG-Photos.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: center;
+}
+
+.gnb > li:nth-child(3) > a {
+    background: url(../images/Vector-Arrow-Down-PNG-Photos.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: center;
+}
+
+.gnb > li a {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    color: #333;
+}
+
+.gnb > li:hover {
+    background-color: #ebebeb;
+}
+
+.sub_menu {
+    display: none;
+    width: 100%;
+    background-color: #fff;
+}
+
+.sub_menu li a {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    display: block;
+    z-index: 999;
+    background-color: #ebebeb;
+    padding-left: 30px;
+}
+
+.sub_menu li a:hover {
+    background-color: #d0d0d0;
+}
+
+.menu_toggle_btn {
+    width: 35px;
+    height: 35px;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+.menu_toggle_btn img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu_bg {
+    width: 100%;
+    height: 142vh;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    position: absolute;
+    display: none;
+}
+
+.close_btn {
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+}
+
+.close_btn > a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.main_bg {
+    width: 100%;
+    height: 50px;
+    background: url(../images/main_bg3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 50px;
+}
+
+
+.program_menu {
+    display: flex;
+    width: 80%;
+    height: 75px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px;
+    margin: 0 auto;
+    margin-top: -50px;
+}
+
+.program_menu_in {
+    width: 100%;
+}
+
+.program_list {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    line-height: 75px;
+}
+
+.program_list > li:first-child {
+    width: 30%;
+    height: 75px;
+    border-right: 1px dotted #666;
+}
+
+
+.program_list > li:last-child {
+    width: 70%;
+    height: 75px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.concert_list {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.concert_list > li {
+    width: 100%;
+    height: 75px;
+    display: none;
+}
+
+.contents_box {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+    background-color: rgb(245, 245, 245);
+}
+
+.contents_tit h2 {
+    font-weight: normal;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    font-family: 'VitroCore';
+}
+
+.contents_tit p {
+    margin-bottom: 20px;
+}
+
+hr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sub_tit h2 {
+    margin: 30px 0;
+    font-weight: normal;
+    font-family: 'VitroPride';
+    font-weight: bold;
+}
+
+.musician_list li {
+    margin-bottom: 30px;
+}
+
+.musician_list li p {
+    margin-top: 10px;
+    
+}
+
+.musician_list li:last-child p {
+    padding-bottom: 30px;
+}
+
+.footer {
+    width: 100%;
+    height: 300px;
+    background-color: #ebebeb;
+    color: #888;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 30px auto;
+}
+
+.contact > li {
+    width: 100%;
+    line-height: 25px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.contact > li:last-child {
+    margin-top: 25px;
+    font-size: 12px;
+}
+
+.contact > li span {
+    font-size: 0.9rem;
+}
+
+.contact > li:nth-child(3) span {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sns {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 30px;
+}
+
+.sns li {
+    width: 35px;
+    height: 35px;
+    opacity: 0.3;
+}
+
+.sns li:hover{
+    opacity: 0.7;
+}
+
+.sns li:first-child a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: url(../images/sns.png);
+    background-position: -6px -10px;
+}
+
+.sns li:nth-child(2) a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: url(../images/sns.png);
+    background-position: -42px -10px;
+}
+
+
+.sns li:last-child a {
+    display: block;
+    width: 40px;
+    height: 35px;
+    background: url(../images/sns.png);
+    background-position: -78px -10px;
+}
+
+@media all and (min-width:768px) {
+
+    .header {
+        display: flex;
+        width: 100%;
+        height: 70px;
+    }
+
+    .header_box {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .logo {
+        width: 90px;
+        height: 50px;
+        margin-top: 10px;
+    }
+    
+    .logo a img{
+        width: 90px;
+    }
+
+    nav {
+        display: flex;
+        width: 50%;
+        height: 50px;
+    }
+
+    .gnb {
+        position: static;
+        display: flex!important;
+        flex-direction: row;
+        width: 100%;
+        height: 30px;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .gnb > li{
+        width: 100%;
+        height: 30px;
+    }
+
+    .gnb > li a {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .gnb > li a:hover {
+        color: #403fa1;
+    }
+
+    .sub_menu li a {
+        width: 100%;
+        min-width: 100px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        text-align: center;
+    }
+    
+    .sub_menu li{
+        background-color: #ececec;
+    }
+    
+    .sub_menu li:hover{
+        background-color: #bfbfbf
+    }
+
+    .close_btn {
+        display: none;
+    }
+
+    .gnb > li:nth-child(2) a {
+        background: none;
+    }
+
+    .gnb > li:nth-child(3) a {
+        background: none;
+    }
+
+    .menu_toggle_btn {
+        display: none;
+    }
+    
+    .contents{
+        margin-top: 10px;
+    }
+    
+    .footer{
+        width: 100%;
+        height: auto;
+    }
+    
+    .contact > li{
+        font-size: 1rem;
+    }
+    
+    .contact > li span{
+        font-size: 1rem;
+    }
+
+}
+
+@media all and (min-width:1024px){
+    
+    .header{
+        height: 70px;
+    }
+    
+    .logo{
+        width: 90px;
+        height: 70px;
+    }
+    
+    .logo a img{
+        width: 100%;
+        height: 50px;
+    }
+    
+    nav{
+        width: 50%;
+        max-width: 500px;
+    }
+    
+    .contents_tit h2{
+       font-size: 2rem;
+    }
+    
+    .contents_tit{
+        padding: 20px 0;
+    }
+    
+    .musician{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .sub_tit{
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .musician_list{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    
+    .musician_list img{
+        width: 250px;
+    }
+    
+    .musician_list li p{
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .footer{
+            display: flex;
+            height: 250px;
+            margin-top: 50px;
+        }
+        
+        .contact{
+            display: flex;
+            flex-flow: row wrap;
+            max-width: 900px;
+        }
+        
+        .contact>li{
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        
+        .contact>li span{
+            font-size: 16px;
+        }
+        
+        .contact>li:first-child{
+            width: 60%;
+            order: 1;
+        }
+        
+        .contact>li:nth-child(2){
+            order: 4;
+            margin-top: -20px;
+        }
+        
+        .contact>li:nth-child(3){
+            width: 20%;
+            order: 2;
+            text-align: center;
+            margin-left: 0px;
+        }
+        
+        .contact>li:nth-child(4){
+            order: 3;
+            width: 20%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+        
+        .sns{
+            width: 10%;
+        }
+        
+        .contact>li:last-child{
+            order: 5;
+            width: 100%;
+            text-align: center;
+            margin-top: 70px;
+        }
+        
+        .contact .sns{
+            display: flex;
+        }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

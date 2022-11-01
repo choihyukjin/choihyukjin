@@ -1,0 +1,1178 @@
+@charset "utf-8";
+
+.sec01 {
+    text-align: center;
+
+}
+
+.sec01 .wrap .first_page {
+    position: relative;
+}
+
+.sec01 .wrap .typing li {
+    font-weight: 700;
+    color: #2d2d2d;
+    position: relative;
+    z-index: 2;
+    line-height: 30px;
+    font-size: 25px;
+    height: 30px;
+    top: -260px;
+}
+
+.sec01 .wrap ul li span {
+    color: #fd9393;
+}
+
+.sec01 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #b1e1e2;
+    animation: sky linear 20s infinite;
+}
+
+section {
+    width: 1000px;
+    height: 400px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+section .sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+section .sky .sun {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    margin-left: -100px;
+    transform-origin: center 500px;
+    animation: sun linear 20s infinite;
+}
+
+section .sky .cloud1 {
+    position: absolute;
+    top: -30px;
+    left: 10%;
+    animation: flow linear 20s infinite;
+}
+
+section .sky .cloud2 {
+    position: absolute;
+    top: 20px;
+    left: 0%;
+    animation: flow linear 20s infinite;
+}
+
+section .town .circle {
+    position: absolute;
+    bottom: 104px;
+    left: 50%;
+    margin-left: -165px;
+    opacity: 0.7;
+    animation: rotation linear 20s infinite;
+}
+
+section .town .night {
+    position: absolute;
+    bottom: 0px;
+    left: 40px;
+}
+
+section .town .day {
+    position: absolute;
+    bottom: 0px;
+    left: 40px;
+    animation: day linear 20s infinite;
+}
+
+section .people {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: day linear 20s infinite;
+}
+
+section .people .man {
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    animation: flow linear 20s infinite;
+}
+
+section .people .family {
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    animation: flow linear 20s infinite;
+}
+
+/* 태블릿 768px */
+
+@media all and (max-width:1024px) {
+    
+    section{
+        top: 70%
+    }
+    section .sky {
+        width: 70%;
+    }
+    
+    section .sky .sun{
+        width: 100px;
+        transform-origin: center 350px;
+        top: 0px;
+        margin-left: 100px;
+    }
+    
+    section .sky .cloud1{
+        width: 70px;
+        top: 80px;
+        margin-left: 100px;
+    }
+    
+    section .sky .cloud2{
+        width: 170px;
+        top: 120px;
+        margin-left: 100px;
+    }
+
+    section .town {
+        width: 70%;
+    }
+
+    section .people {
+        width: 70%;
+    }
+
+    section .town .day {
+        width: 700px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    section .town .night {
+        width: 700px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .sec01 .wrap .typing li {
+        top: -170px;
+    }
+
+    section .town .circle {
+        width: 170px;
+        margin-left: -140px;
+        bottom: 70px;
+    }
+
+    section .man {
+        width: 40px;
+        margin-left: 130px;
+    }
+
+    section .family {
+        width: 40px;
+        margin-left: 130px;
+    }
+}
+
+/* 모바일 */
+@media all and (max-width:768px) {
+    
+    section{
+        top: 60%;
+    }
+    section .sky {
+        width: 50%;
+    }
+    
+    section .sky .sun{
+        width: 70px;
+        transform-origin: center 250px;
+        top: 100px;
+        margin-left: 200px;
+    }
+    
+    section .sky .cloud1{
+        width: 40px;
+        top: 145px;
+        margin-left: 215px;
+    }
+    
+    section .sky .cloud2{
+        width: 120px;
+        top: 170px;
+        margin-left: 220px;
+    }
+
+    section .town {
+        width: 50%;
+    }
+
+    section .people {
+        width: 50%;
+    }
+
+    section .town .day {
+        width: 500px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    section .town .night {
+        width: 500px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .sec01 .wrap .typing li {
+        top: -130px;
+    }
+
+    section .town .circle {
+        width: 130px;
+        margin-left: -102px;
+        bottom: 51px;
+    }
+
+    section .man {
+        width: 20px;
+        margin-left: 240px;
+    }
+
+    section .family {
+        width: 20px;
+        margin-left: 240px;
+    }
+}
+
+/* 놀이기구 */
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 하늘색 */
+@keyframes sky {
+    0% {
+        background-color: #b08fcc;
+    }
+
+    25% {
+        background-color: #b1e1e2;
+    }
+
+    50% {
+        background-color: #fcd2e2;
+    }
+
+    75% {
+        background-color: #636888;
+    }
+
+    100% {
+        background-color: #b08fcc;
+    }
+}
+
+/* 태양회전 */
+@keyframes sun {
+    0% {
+        opacity: 0;
+        transform: rotate(-90deg);
+    }
+
+    25% {
+        opacity: 1;
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(30deg);
+    }
+
+    75% {
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(-90deg);
+    }
+}
+
+/* 낮밤 */
+@keyframes day {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 오른쪽으로 이동 */
+@keyframes flow {
+    0% {
+        left: 0%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 90%;
+        opacity: 0;
+    }
+}
+
+.sec02 .wrap .intro_left {
+    display: flex;
+    justify-content: center;
+}
+
+.sec02 .wrap .intro_left img {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: 5px solid #fcafaf;
+    margin-bottom: 80px;
+    width: 200px;
+}
+
+.intro_title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    display: block;
+}
+
+.intro_right p {
+    line-height: 25px;
+}
+
+.sec03{
+    background: linear-gradient(0deg,  #2ddbdc, #ac8bef)
+}
+
+.sec03 h3 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 23px;
+    font-weight: 600;
+    color: #fff;
+}
+.sec03 h3 span {
+    opacity: 0.8;
+}
+
+.sec03 .skills li {
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.sec03 .skills li p span {
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.wrap-portfolio {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    background: linear-gradient(0deg, #ac8bef, #2ddbdc);
+}
+
+.wrap-portfolio h1 {
+    font-weight: bold;
+    font-size: 23px;
+    font-family: "orbitron";
+    color: #fff;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    transform: translateX(-50%);
+}
+
+.wrap-portfolio h1 span {
+    opacity: 0.8;
+}
+
+.wrap-portfolio .auto {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+}
+
+.wrap-portfolio .auto li {
+    float: left;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    opacity: 0.9;
+    transition: all 0.5s;
+}
+
+.wrap-portfolio .auto li:hover {
+    opacity: 1;
+    transform: scale(1.4);
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper .swiper-slide {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    top: 50%;
+    margin-top: -230px;
+}
+
+.swiper-wrapper .swiper-slide .inner {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 30px;
+    box-sizing: border-box;
+    opacity: 0.4;
+    transition: 1s;
+}
+
+.swiper-wrapper .swiper-slide .inner .con {
+    position: relative;
+    z-index: 10;
+}
+
+.swiper-wrapper .swiper-slide .inner .con img {
+    width: 100%;
+}
+
+.swiper-wrapper .swiper-slide .inner .con a:hover{
+    display: block;
+    transform: scale(0.98);
+}
+
+.swiper-wrapper .swiper-slide .inner .con a:hover::after{
+    opacity: 1;
+}
+
+.swiper-wrapper .swiper-slide .inner .con h2 {
+    font-size: 30px;
+    font-weight: normal;
+    font-family: "roboto";
+    color: #111;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.swiper-wrapper .swiper-slide .inner .con h2::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: #888;
+    margin-top: 15px;
+    transition: 1s 0.5s;
+}
+
+.swiper-wrapper .swiper-slide-active .inner .con h2::after {
+    width: 100px;
+}
+
+.swiper-wrapper .swiper-slide .inner .con p {
+    font-weight: normal;
+    font-size: 13px;
+    font-family: "arial";
+    line-height: 1.3;
+    color: #aaa;
+    letter-spacing: 1px;
+}
+
+.wrap-portfolio .swiper-wrapper .swiper-slide-active .inner {
+    opacity: 1;
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.8);
+}
+
+.wrap-portfolio .swiper-wrapper .swiper-slide .inner::before,
+.wrap-portfolio .swiper-wrapper .swiper-slide .inner::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    background: #fff;
+}
+
+@keyframes ani {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    1% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+}
+
+.wrap-portfolio .swiper-wrapper .swiper-slide-active .inner::before {
+    animation: ani 1s ease 1;
+}
+
+.wrap-portfolio .swiper-wrapper .swiper-slide-active .inner::after {
+    animation: ani 1s ease 0.3s 1;
+}
+
+.wrap-portfolio .swiper-wrapper .swiper-slide-prev .inner,
+.wrap-portfolio .swiper-wrapper .swiper-slide-next .inner {
+    opacity: 0.7;
+}
+
+
+.wrap-portfolio .swiper-button-prev {
+    left: auto;
+    right: 100px;
+    top: auto;
+    bottom: 50px;
+    filter: grayscale(100%) brightness(3);
+    transform: scale(0.5);
+}
+
+.wrap-portfolio .swiper-button-next {
+    left: auto;
+    right: 60px;
+    top: auto;
+    bottom: 50px;
+    filter: grayscale(100%) brightness(3);
+    transform: scale(0.5);
+}
+
+.wrap-portfolio .swiper-pagination-fraction {
+    bottom: auto;
+    top: 70px;
+    left: auto;
+    right: 50px;
+    width: auto;
+    font-size: 16px;
+    font-family: "orbitron";
+    letter-spacing: 1px;
+    color: #eee;
+}
+
+.wrap-portfolio .swiper-pagination-fraction span:nth-of-type(1) {
+    color: #fff;
+}
+
+.sec05 .wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.sec05 .contact {
+    width: 100%;
+}
+
+.sec05 .contact .contact_title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #404040;
+}
+
+.sec05 .contact p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #404040;
+    color: red;
+}
+
+.sec05 .contact ul {
+    display: flex;
+    margin-top: 70px;
+    flex-direction: column;
+    text-align: center;
+    font-size: 18px;
+}
+
+.sec05 .contact ul .contact_mail {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #404040;
+    height: 50px;
+}
+
+.sec05 .contact ul .contact_mail:hover {
+    font-size: 23px;
+    transition: 0.2s;
+    color: #f5a1a1;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    font-size: 12px;
+}
+
+.footer li:first-child {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.footer li:nth-child(2) {
+    color: #909090;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/*테블릿 768px*/
+
+@media all and (min-width:768px) {
+
+    .sec01 .wrap .typing li {
+        font-size: 40px;
+        line-height: 47px;
+        height: 50px;
+    }
+
+    .sec02 .wrap .intro {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sec02 .wrap .intro_left {
+        width: 49%;
+        justify-content: flex-start;
+    }
+
+    .sec02 .wrap .intro_left img {
+        margin-bottom: 0;
+    }
+
+    .sec02 .wrap .intro_right {
+        width: 50%;
+    }
+    
+    .wrap-portfolio h1{
+        font-size: 30px;
+    }
+
+/*
+    .sec04 .project_list {
+        width: 100%;
+    }
+
+    .sec04 .project_list li {
+        float: left;
+        width: 46%;
+        margin-right: 4%;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .sec04 .project_list li a img {
+        height: 150px;
+        width: 80%;
+    }
+
+    .sec04 .project li a:before {
+        width: 80%;
+    }
+
+    .sec04 .project_list li:nth-child(2),
+    .sec04 .project_list li:last-child {
+        margin-right: 0;
+    }
+*/
+
+    .sec05 .wrap .contact_title {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .sec05 .wrap .contact p {
+        font-size: 25px;
+    }
+
+    .sec05 .wrap .contact li {
+        font-size: 1.5rem;
+    }
+
+    .sec05 .wrap .contact .contact_mail {
+        font-size: 2rem;
+    }
+
+    .sec05 .wrap .contact .contact_mail:hover {
+        font-size: 1.8rem;
+    }
+
+}
+
+@media all and (min-width:1024px) {
+
+    .sec01 .wrap .typing li {
+        font-size: 50px;
+        line-height: 55px;
+        height: 60px;
+    }
+
+    .sec02 .wrap .intro {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start
+    }
+
+    .sec02 .wrap .intro_left {
+        width: 50%;
+        justify-content: center;
+    }
+
+    .sec02 .wrap .intro_left img {
+        margin-bottom: 0;
+        width: 300px;
+    }
+
+    .intro_title {
+        display: block;
+        font-size: 25px;
+        margin-bottom: 50px;
+    }
+
+    .sec02 .wrap .intro_right {
+        width: 33%;
+        font-size: 20px;
+        line-height: 50px;
+    }
+
+    .sec03 .wrap .skills h3 {
+        font-size: 35px;
+    }
+
+    .sec03 .wrap .skills li {
+        font-size: 20px;
+    }
+
+    .sec03 .wrap .skills li span {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    
+    .wrap-portfolio h1{
+        font-size: 30px;
+        left: 50px;
+        transform: translateX(0);
+    }
+
+/*
+    .sec04 .project {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .sec04 .project .project_title {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .sec04 .project_list li {
+        width: 33%;
+        height: 150px;
+        margin-right: 0;
+    }
+
+    .sec04 .project_list li a img {
+        width: 100%;
+    }
+
+    .sec04 .project li a:before {
+        width: 80%;
+    }
+*/
+
+    .sec05 .wrap .contact_title {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .sec05 .wrap .contact p {
+        font-size: 25px;
+    }
+
+    .sec05 .wrap .contact li {
+        font-size: 1.5rem;
+    }
+
+    .sec05 .wrap .contact .contact_mail {
+        font-size: 2rem;
+    }
+
+    .sec05 .wrap .contact .contact_mail:hover {
+        font-size: 1.8rem;
+    }
+
+
+}
+
+
+/* 공통 */
+.wrap {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    font-family: 'NanumSquare';
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    border: 1px solid #fff;
+
+}
+
+/*타이핑 이벤트*/
+.typing_txt {
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.typing ul li.on {
+    display: inline-block;
+    animation-name: cursor;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cursor {
+    0% {
+        border-right: 1px solid #fff;
+    }
+
+    50% {
+        border-right: 1px solid #000;
+    }
+
+    100% {
+        border-right: 1px solid #fff;
+    }
+}
+
+/* arrow */
+
+.scroll {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 998;
+    transition: 0.3s;
+}
+
+.scroll.active {
+    bottom: -100px;
+    z-index: -1;
+}
+
+.scroll p.scrollp {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    margin-top: 5px;
+    opacity: 0.8;
+    letter-spacing: 2px;
+}
+
+.scroll .arrow {
+    display: block;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.scroll .arrow img {
+    animation-name: arrow;
+    animation-duration: 1s;
+    animation-timing-function: step-start;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrow {
+    from {
+        margin-top: 0;
+    }
+
+    3% {
+        margin-top: -25px;
+    }
+
+    7% {
+        margin-top: -50px;
+    }
+
+    11% {
+        margin-top: -75px;
+    }
+
+    15% {
+        margin-top: -100px;
+    }
+
+    19% {
+        margin-top: -125px;
+    }
+
+    23% {
+        margin-top: -150px;
+    }
+
+    26% {
+        margin-top: -175px;
+    }
+
+    30% {
+        margin-top: -200px;
+    }
+
+    34% {
+        margin-top: -225px;
+    }
+
+    38% {
+        margin-top: -250px;
+    }
+
+    42% {
+        margin-top: -275px;
+    }
+
+    46% {
+        margin-top: -300px;
+    }
+
+    50% {
+        margin-top: -325px;
+    }
+
+    53% {
+        margin-top: -350px;
+    }
+
+    57% {
+        margin-top: -375px;
+    }
+
+    61% {
+        margin-top: -400px;
+    }
+
+    65% {
+        margin-top: -425px;
+    }
+
+    69% {
+        margin-top: -450px;
+    }
+
+    73% {
+        margin-top: -475px;
+    }
+
+    76% {
+        margin-top: -500px;
+    }
+
+    80% {
+        margin-top: -525px;
+    }
+
+    84% {
+        margin-top: -550px;
+    }
+
+    88% {
+        margin-top: -575px;
+    }
+
+    92% {
+        margin-top: -600px;
+    }
+
+    96% {
+        margin-top: -625px;
+    }
+
+    to {
+        margin-top: -650px;
+    }
+
+    /* 이미지의 끝점 */
+}
+
+/* 폰트 */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    src: url(NanumSquareR.eot);
+    src: url(NanumSquareR.eot?#iefix) format('embedded-opentype'),
+        url(NanumSquareR.woff) format('woff'),
+        url(NanumSquareR.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    src: url(NanumSquareB.eot);
+    src: url(NanumSquareB.eot?#iefix) format('embedded-opentype'),
+        url(NanumSquareB.woff) format('woff'),
+        url(NanumSquareB.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 800;
+    src: url(NanumSquareEB.eot);
+    src: url(NanumSquareEB.eot?#iefix) format('embedded-opentype'),
+        url(NanumSquareEB.woff) format('woff'),
+        url(NanumSquareEB.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 300;
+    src: url(NanumSquareL.eot);
+    src: url(NanumSquareL.eot?#iefix) format('embedded-opentype'),
+        url(NanumSquareL.woff) format('woff'),
+        url(NanumSquareL.ttf) format('truetype');
+}
+
+* {
+    font-family: 'NanumSquare', sans-serif;
+}
+
+/*옆으로 슬라이드 효과*/
+
+#fullpage div.active .intro_right p span,
+#fullpage div.active .skills p span {
+    -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+#fullpage div.active .contact p {
+    -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
